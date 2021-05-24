@@ -21,13 +21,17 @@ public class _77484 {
         int MAX_RANK = 0;
         int MIN_RANK = 0;
         
-        Arrays.sort(win_nums);
-        
-        for(int i = 0; i < 6; i++) {
-        	if(Arrays.binarySearch(win_nums, lottos[i]) >= 0)
-        		cnt++;
-        	if(lottos[i] == 0)
+        for(int lotto : lottos) {
+        	if(lotto == 0)
         		unknown++;
+        	else {
+        		for(int num : win_nums) {
+        			if(lotto == num) {
+        				cnt++;
+        				break;
+        			}
+        		}
+        	}
         }
         
         MAX_RANK = cnt + unknown;
