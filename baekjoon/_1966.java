@@ -7,13 +7,14 @@ import java.util.LinkedList;
 import java.util.StringTokenizer;
 
 public class _1966 {
-	
+
 	public static void main(String[] args) throws IOException {
 	
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st;
+		
 		StringBuilder sb = new StringBuilder();
-		    	
+		
 		int cnt = 0;
 		int j = 0;
 		int N = 0;
@@ -52,10 +53,11 @@ public class _1966 {
 				}
 				else queue.add(temp);
 			}
-			
+		
 			sb.append(cnt).append("\n");
 		}
-		    	
+		
 		System.out.println(sb);
+	
 	}
 }
