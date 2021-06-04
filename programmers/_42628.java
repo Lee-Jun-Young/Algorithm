@@ -1,6 +1,7 @@
 package programmers;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class _42628 {
@@ -12,47 +13,38 @@ public class _42628 {
 	}
 
 	public static int[] solution(String[] operations) {
-        int[] answer = new int[2];
+        int[] answer = {0,0};
         
-        PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
-        int max = 0;
-        int min = 0;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
         
         for(String operation : operations) {
         	String[] temp = operation.split(" ");
-        	max = Math.max(max, Integer.parseInt(temp[1]));
-        	min = Math.min(min, Integer.parseInt(temp[1]));
-        	
+ 	
         	if(temp[0].equals("I")) {
-        		heap.add(Integer.parseInt(temp[1]));
+        		minHeap.add(Integer.parseInt(temp[1]));
+        		maxHeap.add(Integer.parseInt(temp[1]));
         	}
         	
         	if(temp[0].equals("D")) {
-        		if(!heap.isEmpty()) {
-        			if(Integer.parseInt(temp[1]) > 0)
-        				heap.remove(max);
-        			else
-        				heap.remove(min);
+        		if(!minHeap.isEmpty()) {
+        			if(Integer.parseInt(temp[1]) > 0) {
+        				int max = maxHeap.peek();
+        				minHeap.remove(max);
+        				maxHeap.remove(max);
+        			}
+        			else {
+        				int min = minHeap.peek();
+        				minHeap.remove(min);
+        				maxHeap.remove(min);
+        			}
         		}	
         	}
         }
 
-        if(heap.isEmpty()) {
-        	answer[0] = 0;
-        	answer[1] = 0;
-        }
-        else {
-        	answer[1] = heap.poll();
-            int idx = heap.size();
-            
-            if(idx == 1)
-            	answer[0] = heap.poll();
-            else {
-            	while(idx > 1) {
-                	heap.poll();     	
-                }
-            	answer[0] = heap.poll();
-            }
+        if(!minHeap.isEmpty()) {
+        	answer[0] = maxHeap.poll();
+        	answer[1] = minHeap.poll();
         }
 
         return answer;
