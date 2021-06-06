@@ -3,7 +3,7 @@ package baekjoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class _1620 {
@@ -18,18 +18,21 @@ public class _1620 {
 		int N = Integer.parseInt(st.nextToken());
 		int M = Integer.parseInt(st.nextToken());
 		
-		ArrayList<String> list = new ArrayList<String>();
+		HashMap<String, Integer> hashMap = new HashMap<String, Integer>();
+		String[] arr = new String[N+1];
 		
-		for(int i = 0; i < N; i++) {
-			list.add(br.readLine()); 
+		for(int i = 1; i < N+1; i++) {
+			String input = br.readLine();
+			hashMap.put(input, i);
+			arr[i] = input;
 		}
 		
 		for(int i = 0; i < M; i++) {
 			String temp = br.readLine(); 
 			if(!isNumber(temp)) {
-				sb.append(list.indexOf(temp)+1).append("\n");
+				sb.append(hashMap.get(temp)).append("\n");
 			}else {
-				sb.append(list.get(Integer.parseInt(temp)-1)).append("\n");
+				sb.append(arr[Integer.parseInt(temp)]).append("\n");
 			}
 		}
 
