@@ -19,21 +19,20 @@ public class _1259 {
 			if(str.equals("0"))
 				break;
 			
-			int temp = str.length();
+			int len = str.length()/2;
+			int temp = str.length()-1;
 			
-			for(int i = 0; i < temp/2; i++) {
-				if(str.charAt(i) != str.charAt(temp-i-1)) {
+			for(int i = 0; i < len; i++) {
+				if(str.charAt(i) != str.charAt(temp-i)) {
 					flag = false;
 				}
 			}
-			if(flag) {
+			
+			if(flag) 
 				sb.append("yes").append("\n");
-			}else {
+			else 
 				sb.append("no").append("\n");
-			}
 		}
-		
 		System.out.println(sb);
-
 	}
 }
