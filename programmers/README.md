@@ -4,6 +4,7 @@
   + [로또의 최고 순위와 최저 순위](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_77484.java)
   + [실패율](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42889.java)
   + [[1차]다트 게임](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_17682.java)
+  + [크레인 인형뽑기 게임](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_64061.java)
 
 + ### level2
   + [땅따먹기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_12913.java)
