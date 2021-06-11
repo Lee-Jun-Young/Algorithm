@@ -3,7 +3,7 @@ package programmers;
 public class _67256 {
 
 	public static void main(String[] args) {
-		int[] numbers = {1,2,3,4,8,2,1,4,5,9,5};	
+		int[] numbers = {1,2,3,4,8,2,1,4,5,9,5};
 		String hand = "right";
 		
 		System.out.println(solution(numbers, hand));
@@ -15,6 +15,7 @@ public class _67256 {
 		int rightHandLocation = 12;
 		
 		for(int value : numbers){
+		
 			if(value == 1 || value == 4 || value == 7) {
 				answer += "L";
 				leftHandLocation = value;
@@ -49,11 +50,11 @@ public class _67256 {
 	
 	public static int checkLength(int current, int number) {
 		
-		if(current == 0)
-			current = 11;
-		if(number == 0)
-			number = 11;
-		
+	if(current == 0)
+		current = 11;
+	if(number == 0)
+		number = 11;
+	
 		return Math.abs((current - 1) / 3 - (number / 3)) + Math.abs((current - 1) % 3 - 1);
 	}
 
