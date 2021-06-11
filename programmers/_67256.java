@@ -50,10 +50,10 @@ public class _67256 {
 	
 	public static int checkLength(int current, int number) {
 		
-	if(current == 0)
-		current = 11;
-	if(number == 0)
-		number = 11;
+		if(current == 0)
+			current = 11;
+		if(number == 0)
+			number = 11;
 	
 		return Math.abs((current - 1) / 3 - (number / 3)) + Math.abs((current - 1) % 3 - 1);
 	}
