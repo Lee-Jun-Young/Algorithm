@@ -5,6 +5,7 @@
   + [실패율](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42889.java)
   + [[1차]다트 게임](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_17682.java)
   + [크레인 인형뽑기 게임](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_64061.java)
+  + [키패드 누르기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_67256.java)
 
 + ### level2
   + [땅따먹기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_12913.java)
