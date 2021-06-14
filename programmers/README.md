@@ -15,6 +15,7 @@
   + [구명보트](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42885.java)
   + [튜플](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_64065.java)
   + [괄호 회전하기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_76502.java)
+  + [괄호 변환](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_60058.java)
 
 + ### level3
   + [이중우선순위큐](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42628.java)
