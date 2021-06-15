@@ -13,28 +13,23 @@ public class _10816 {
 		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 
-		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		int[] arr = new int[20000001];
+		
 		int N = Integer.parseInt(br.readLine());
 		st = new StringTokenizer(br.readLine());
-
-		for (int i = 0; i < N; i++) {
-			map.put(i, Integer.parseInt(st.nextToken()));
-		}
-
-		int M = Integer.parseInt(br.readLine());
-
-		st = new StringTokenizer(br.readLine());
-
-		for (int i = 0; i < M; i++) {
-			int cnt = 0;
+		
+		for(int i = 0; i < N; i++) {
 			int temp = Integer.parseInt(st.nextToken());
-
-			for (int j = 0; j < map.size(); j++) {
-				if (map.get(j) == temp)
-					cnt++;
-			}
-			sb.append(cnt + " ");
+			arr[temp + 10000000]++;
 		}
+		
+		int M = Integer.parseInt(br.readLine());
+		st = new StringTokenizer(br.readLine());
+		
+		for(int i = 0; i < M; i++) {
+			sb.append(arr[Integer.parseInt(st.nextToken()) + 10000000] + " ");
+		}
+		
 		System.out.println(sb);
 	}
 }
