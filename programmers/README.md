@@ -17,6 +17,7 @@
   + [괄호 회전하기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_76502.java)
   + [괄호 변환](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_60058.java)
   + [오픈 채팅방](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42888.java)
+  + [다음 큰 숫자](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_12911.java)
 
 + ### level3
   + [이중우선순위큐](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42628.java)
