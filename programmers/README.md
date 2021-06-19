@@ -19,6 +19,7 @@
   + [오픈 채팅방](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42888.java)
   + [다음 큰 숫자](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_12911.java)
   + [위장](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42578.java)
+  + [[1차]캐시](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_17680.java)
 
 + ### level3
   + [이중우선순위큐](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42628.java)
