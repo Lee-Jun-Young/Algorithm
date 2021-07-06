@@ -29,9 +29,8 @@ public class _49994 {
 					break;
 				else {
 					y_location += 1;
-					if (!set.contains(str + " " + x_location + " " + y_location)
-							|| !set.contains(x_location + " " + y_location + " " + str))
-						set.add(x_location + " " + y_location + " " + str);
+					set.add(str + " " + x_location + " " + y_location);
+					set.add(x_location + " " + y_location + " " + str);
 					break;
 				}
 			case 'D':
@@ -39,9 +38,8 @@ public class _49994 {
 					break;
 				else {
 					y_location -= 1;
-					if (!set.contains(str + " " + x_location + " " + y_location)
-							|| !set.contains(x_location + " " + y_location + " " + str))
-						set.add(x_location + " " + y_location + " " + str);
+					set.add(str + " " + x_location + " " + y_location);
+					set.add(x_location + " " + y_location + " " + str);
 					break;
 				}
 			case 'R':
@@ -49,25 +47,21 @@ public class _49994 {
 					break;
 				else {
 					x_location += 1;
-					if (!set.contains(str + " " + x_location + " " + y_location)
-							|| !set.contains(x_location + " " + y_location + " " + str))
-						set.add(x_location + " " + y_location + " " + str);
+					set.add(str + " " + x_location + " " + y_location);
+					set.add(x_location + " " + y_location + " " + str);
 					break;
 				}
 			case 'L':
-				if (x_location == -5)
-					break;
-				else {
+				if (x_location != -5) {
 					x_location -= 1;
-					if (!set.contains(str + " " + x_location + " " + y_location)
-							|| !set.contains(x_location + " " + y_location + " " + str))
-						set.add(x_location + " " + y_location + " " + str);
+					set.add(str + " " + x_location + " " + y_location);
+					set.add(x_location + " " + y_location + " " + str);
 					break;
 				}
 			}
 		}
 
-		answer += set.size();
+		answer += set.size() / 2;
 
 		return answer;
 	}
