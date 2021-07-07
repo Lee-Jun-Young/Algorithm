@@ -24,6 +24,7 @@
   + [이진 변환 반복하기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_70129.java)
   + [다리를 지나는 트럭](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42583.java)
   + [방문 길이](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_49994.java)
+  + [소수 찾기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42839.java)
 
 + ### level3
   + [이중우선순위큐](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_42628.java)
