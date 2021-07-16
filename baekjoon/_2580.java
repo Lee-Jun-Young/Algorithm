@@ -11,7 +11,6 @@ public class _2580 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 
 		for (int i = 0; i < 9; i++) {
@@ -21,46 +20,59 @@ public class _2580 {
 			}
 		}
 
-		for (int i = 0; i < 9; i++) {
-			for (int j = 0; j < 9; j++) {
-				int temp = arr[i][j];
-				if (temp == 0) {
-					for (int k = 1; k < 10; k++) {
-						if (rowCheck(k, i) && colCheck(k, j) && squareCheck(k, i, j))
-							arr[i][j] = k;
-					}
-				} 
-			}
-		}
-
-		for(int i = 0; i < 9; i++) {
-			for(int j = 0; j < 9; j++) {
-				sb.append(arr[i][j] + " ");
-			}
-			sb.append("\n");
-		}
-		
-		System.out.println(sb);
-		
+		sudoku(0, 0);
 	}
 
-	public static boolean rowCheck(int N, int num) {
+	public static void sudoku(int row, int col) {
+		StringBuilder sb = new StringBuilder();
+
+		if (col == 9) {
+			sudoku(row + 1, 0);
+			return;
+		}
+
+		if (row == 9) {
+			for (int i = 0; i < 9; i++) {
+				for (int j = 0; j < 9; j++) {
+					sb.append(arr[i][j] + " ");
+				}
+				sb.append("\n");
+			}
+
+			System.out.println(sb);
+			System.exit(0);
+		}
+
+		int temp = arr[row][col];
+		if (temp == 0) {
+			for (int i = 1; i < 10; i++) {
+				if (isChecked(i, row, col)) {
+					arr[row][col] = i;
+					sudoku(row, col + 1);
+				}
+			}
+			arr[row][col] = 0;
+			return;
+		}
+
+		sudoku(row, col + 1);
+	}
+
+	public static boolean isChecked(int N, int row, int col) {
+
+		// 행 체크
 		for (int i = 0; i < 9; i++) {
-			if (N == arr[num][i])
+			if (N == arr[row][i])
 				return false;
 		}
-		return true;
-	}
 
-	public static boolean colCheck(int N, int num) {
+		// 열 체크
 		for (int i = 0; i < 9; i++) {
-			if (N == arr[i][num])
+			if (N == arr[i][col])
 				return false;
 		}
-		return true;
-	}
 
-	public static boolean squareCheck(int N, int row, int col) {
+		// 3 X 3 사각형 체크
 		int tempX = row / 3 * 3;
 		int tempY = col / 3 * 3;
 
@@ -70,6 +82,7 @@ public class _2580 {
 					return false;
 			}
 		}
+
 		return true;
 	}
 
