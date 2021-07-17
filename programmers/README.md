@@ -7,6 +7,7 @@
   + [크레인 인형뽑기 게임](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_64061.java)
   + [키패드 누르기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_67256.java)
   + [숫자문자열과 영단어](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_81301.java)
+  + [폰켓몬](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_1845.java)
 
 + ### level2
   + [땅따먹기](https://github.com/Lee-Jun-Young/Algorithm/blob/master/programmers/_12913.java)
