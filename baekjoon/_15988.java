@@ -16,22 +16,18 @@ public class _15988 {
         dp[2] = 2;
         dp[3] = 4;
         
+        for(int i = 4; i <= 1000000; i++) {
+        	dp[i] = (dp[i-1] + dp[i-2] + dp[i-3]) % 1000000009;
+        }
+        
 		int T = Integer.parseInt(br.readLine());
         
 		for(int i = 0; i < T; i++) {
 			int temp = Integer.parseInt(br.readLine());
-			sb.append(dpCheck(temp)).append("\n");
+			
+			sb.append(dp[temp]).append("\n");
 		}
-		System.out.println(sb);
 		
+		System.out.println(sb);	
 	}
-	
-	static long dpCheck(int num) {
-        
-        for(int i = 4; i <= num; i++) {
-        	dp[i] = (dp[i-1] + dp[i-2] + dp[i-3]) % 1000000009;
-        }
-        return dp[num];
-	}
-
 }
