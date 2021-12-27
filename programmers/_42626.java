@@ -25,12 +25,7 @@ public class _42626 {
 			if (queue.size() == 1)
 				return -1;
 
-			int x = queue.poll();
-			int y = queue.poll();
-
-			int temp = x + (y * 2);
-
-			queue.add(temp);
+			queue.add(queue.poll() + (queue.poll() * 2));
 			cnt++;
 		}
 
