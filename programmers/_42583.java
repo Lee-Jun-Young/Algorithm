@@ -19,11 +19,11 @@ public class _42583 {
 		Queue<Integer> queue = new LinkedList<>();
 
 		int sum = 0;
-		for (int w : truck_weights) {
 
+		for (int w : truck_weights) {
 			while (true) {
 				if (queue.isEmpty()) {
-					queue.offer(w);
+					queue.add(w);
 					sum += w;
 					answer++;
 					break;
@@ -31,12 +31,12 @@ public class _42583 {
 					sum -= queue.poll();
 				} else {
 					if (sum + w <= weight) {
-						queue.offer(w);
+						queue.add(w);
 						sum += w;
 						answer++;
 						break;
 					} else {
-						queue.offer(0);
+						queue.add(0);
 						answer++;
 					}
 				}
